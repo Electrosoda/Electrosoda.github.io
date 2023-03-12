@@ -19,46 +19,63 @@ $(document).ready(function(){
 
 $(window).resize(function(){
     resize_card();
+
 });
 
 window.onload = function(){
-//    activate_scroll_event();
-$('#staticBackdrop').on('shown.bs.modal', function () {
-    $(this).find('.modal-body').on('scroll', function () {
-        var scrollPos = $(this).scrollTop();
-        var modal_right = $('.modal-right-content');
-        $(".modal-left-content").each(function(i) {
-            console.log($(this).position().top, $(this).closest('.modal-body').scrollTop());
-            var pos = $(this).offset().top - $(this).closest('.modal-body').offset().top;
-            var height = $(this).height();
-            if (pos < scrollPos + $(window).height() && pos + height > scrollPos) {
-                modal_right.eq(i).css('opacity', '1');
-            }
-            else{
-                modal_right.eq(i).css('opacity', '0');
-            }
+//
+    $('.modal').on('shown.bs.modal', function () {
+        var $modal = $(this);
+        $(this).find('.modal-body').on('scroll', function () {
+            var scrollPos = $(this).scrollTop();
+            var modal_right = $('.modal-right-content');
+            $(".modal-left-content").each(function(i) {
+                var pos = $(this).position().top + scrollPos;
+                var top_pos = pos - window.innerHeight + 200;
+                var bottom_pos = pos + $(this).height() - window.innerHeight + 200;
+                if (scrollPos > top_pos && scrollPos < bottom_pos) {
+                    modal_right.eq(i).css('opacity', '1');
+                }
+                else{
+                    if (i+1 != modal_right.length)
+                        modal_right.eq(i).css('opacity', '0');
+                    else{
+                        if (scrollPos > bottom_pos)
+                            modal_right.eq(i).css('opacity', '1');
+                        else
+                            modal_right.eq(i).css('opacity', '0');
+                    }
+                }
+            });
         });
     });
-});
+    h = $('.modal-body > .container > .row').height();
+    $('.modal-body > .container > .row').css('height', h-500);
 }
 
-
-//function activate_scroll_event(){
-//    $('.modal-body').scroll(function() {
-//        var scroH = $('.modal-body').scrollTop();
-//        var modal_right = $('.modal-right-content');
-//        $(".modal-left-content").each(function(index) {
-//            this_bottom = $(this).offset().top + $(this).height() - window.innerHeight;
-//            this_top = $(this).position().top + 100
-//            console.log(scroH, this_top, $(this).position().top, window.innerHeight);
-//
-//            if(scroH > this_top){
-//                $(modal_right[index]).css('opacity', '1');
-//            } else{
-//                $(modal_right[index]).css('opacity', '0');
+//$('.modal-body').scroll(function () {
+//    var document_scrollPos = $(document).scrollTop();
+//    var scrollPos = $(this).scrollTop();
+//    var modal_right = $('.modal-right-content');
+//    $(".modal-left-content").each(function(i) {
+//        var pos = $(this).position().top + document_scrollPos;
+//        var top_pos = pos - window.innerHeight + 200;
+//        var bottom_pos = pos + $(this).height() - window.innerHeight + 200;
+//        if (scrollPos > top_pos && scrollPos < bottom_pos) {
+//            modal_right.eq(i).css('opacity', '1');
+//        }
+//        else{
+//            if (i+1 != modal_right.length)
+//                modal_right.eq(i).css('opacity', '0');
+//            else{
+//                if (scrollPos > bottom_pos)
+//                    modal_right.eq(i).css('opacity', '1');
+//                else
+//                    modal_right.eq(i).css('opacity', '0');
 //            }
-//        });
+//        }
 //    });
-//}
+//});
+
 
 
