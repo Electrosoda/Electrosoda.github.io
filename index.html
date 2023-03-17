@@ -6,10 +6,12 @@
     <title>Yushang Yang Design</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/effect.js"></script>
+
 </head>
 <body>
 
@@ -41,31 +43,92 @@
 </div>
 
 <div class="content">
-    <div class="main-content" id="#home">
-        <div class="container blurred-panel">
-            <div class="">
-                <div class="blurred-panel test">
-                    <img src="imgs/placeholder.jpg" width="200px" class="rounded">
-                    <h2>Yushang Yang</h2>
+    <div class="main-content" id="home">
+        <div class="container bg">
+            <div class="row">
+                <div class="col-md-5 text-end" style="font-size: 15px; padding-right:40px">
+                    <img src="imgs/home/profile.jpg" width="160px" height="160px" style="border-radius: 80px;"><br>
+                    <h3>Yushang Yang</h3>
+                    The Hong Kong Polytechnic University<br>
                     yushang.yang@outlook.com
                 </div>
-                <div>
+                <div class="col-md-7 align-self-end">
+                    <h1 style="color:white; font-size:48px">UX Design</h1>
                     <p>
-                        As a UX designer with a design and research background, I'm passionate about creating functional and aesthetically pleasing products.
+                    My design and research background allow me to create visually appealing designs that are both functional and user-friendly.
                     </p>
-                    <p>
-                        I believe that great design has the power to make a positive impact on people's lives. I'm excited to be part of this dynamic and transformative field and am committed to pushing the boundaries of thoughtful and
-                        user-centric design.
-                    </p>
+                    My skills in balancing user needs and business objectives allow me to thrive in roles that require a balance of creative and analytical thinking.
                 </div>
-
 
             </div>
         </div>
     </div>
 
+    <div class="main-content" id="projects">
+        <div class="container blurred-panel-yellow">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#project-1-modal">
+                        <div class="card ">
+                            <div class="text-frame">
+                                <h5>Netboom</h5>
+                                <h6>Million-user, cloud gaming, global</h6>
+                            </div>
+                            <div class="img-frame">
+                                <img src="imgs/home/project_1.jpg"/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-6">
+                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#project-2-modal">
+                        <div class="card">
+                            <div class="text-frame mt-auto">
+                                <h5>Flower shop</h5>
+                                <h6>Sustainable project, local business</h6>
+                            </div>
+                            <div class="img-frame">
+                                <img src="imgs/home/project_2.jpg"/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#project-3-modal">
+                        <div class="card ">
+                            <div class="text-frame mt-auto">
+                                <h5>Theme design</h5>
+                                <h6>Icon set, UI design</h6>
+                            </div>
+                            <div class="img-frame">
+                                <img src="imgs/home/project_3.jpg"/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#project-4-modal">
+                        <div class="card ">
+                            <div class="text-frame mt-auto">
+                                <h5>Creative works</h5>
+                                <h6>Art practice and exploration</h6>
+                            </div>
+                            <div class="img-frame">
+                                <img src="imgs/home/project_4.jpg"/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="main-content" id="aboutme">
-        <div class="container blurred-panel">
+        <div class="container blurred-panel-green">
             <h2>About Me</h2>
             <p>
                 As a UX designer with two years of experience, I've worked on various projects, from million-user products to local businesses. Before this, I taught fashion management and design at the UK and China's leading universities.
@@ -83,72 +146,55 @@
             </p>
         </div>
     </div>
+    <div class="main-content" id="education">
+        <div class="container blurred-panel-yellow text-center">
+            <h2>Education</h2>
+            <b>The Hong Kong Polytechnic University</b><br>
+            Fashion and Textile Design, Master of Arts(MA)<br>
+            2016-2017, Hong Kong<br><br>
 
-    <div class="main-content" id="projects">
-        <div class="container">
-            <h2>Projects</h2>
+            <b>Central Saint Martins, University of the Arts London</b><br>
+            Womenswear, Study Abroad<br>
+            2016-2016, London, UK<br><br>
+
+            <b>Sichuan University</b><br>
+            Fashion Design, Bachelor’s Degree<br>
+            2012-2016, Chengdu China
+        </div>
+    </div>
+    <div class="main-content" id="experience">
+        <div class="container blurred-panel-green">
+            <h2>Experience</h2>
             <div class="row">
-                <div class="col-lg-6">
-                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#project-1-modal">
-                        <div class="card blurred-panel">
-                            <div class="text-frame">
-                                <h5>Netboom</h5>
-                                <h6>Million-user, cloud gaming, global</h6>
-                            </div>
-                            <div class="img-frame">
-                                <img src="imgs/home/project_1.jpg"/>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <div class="col-md-6 text-end">
+                    <b>Creative Design Manager</b><br>
+                    <b>AQ Consulting Agency</b><br>
+                    May 2021 - July 2022, Shanghai, China<br><br>
 
-                <div class="col-lg-6">
-                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#project-2-modal">
-                        <div class="card blurred-panel">
-                            <div class="text-frame mt-auto">
-                                <h5>Flower shop</h5>
-                                <h6>Sustainable project, local business</h6>
-                            </div>
-                            <div class="img-frame">
-                                <img src="imgs/home/project_2.jpg"/>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <div class="card blurred-panel">
-                            <div class="text-frame mt-auto">
-                                <h5>Netboom</h5>
-                                <h6>dsadsa</h6>
-                            </div>
-                            <div class="img-frame">
-                                <img src="imgs/home/project_3.jpg"/>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a class="img-link card-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <div class="card blurred-panel">
-                            <div class="text-frame mt-auto">
-                                <h5>Netboom</h5>
-                                <h6>dsadsa</h6>
-                            </div>
-                            <div class="img-frame">
-                                <img src="imgs/home/project_4.jpg"/>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <b>User Experience Designer</b><br>
+                    <b>Shanghai Dalong Information Technology</b><br>
+                    July 2020 - May 2021, Shanghai, China<br><br>
 
+
+                </div>
+                <div class="col-md-6 text-start">
+                    <b>Visiting Lecturer</b><br>
+                    <b>Nottingham Trent University</b><br>
+                    September 2019 - March 2020, Nottingham, UK<br><br>
+
+                    <b>Teaching Assistant</b><br>
+                    <b>Donghua University, Shanghai</b><br>
+                    June 2017 - September 2019, Shanghai, China<br><br>
+
+                    <b>Freelancer Translator</b><br>
+                    <b>Vice Asia Pacific, Hong Kong</b><br>
+                    October 2016 - October 2017, Hong Kong<br><br>
+                </div>
             </div>
         </div>
     </div>
     <div class="main-content" id="skills">
-        <div class="container blurred-panel">
+        <div class="container blurred-panel-yellow">
             <h2>Skills</h2>
             <ul>
                 <li>Proficiency with UX tools such as Figma, Sketch, Adobe XD, but also design tools like Photoshop, Adobe Illustration</li>
@@ -160,7 +206,7 @@
     </div>
 
     <div class="main-content" id="awards">
-        <div class="container blurred-panel">
+        <div class="container blurred-panel-green">
             <h2>Awards</h2>
             <p>
                 I won the third prize in the AWS Deep Racer league 2021 China division. Amazon Web Service DeepRacer League is a global autonomous racing competition where developers use reinforcement learning (RL) to train and compete with
@@ -168,7 +214,7 @@
             </p>
             <div class="detail-block">
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/9IJ7o3fV2gc" title="YouTube video" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/s88cXS4uxz4" title="YouTube video" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="detail-block">

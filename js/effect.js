@@ -14,6 +14,8 @@ $(document).ready(function(){
     $("#nav-placeholder").load("navbar.html");
     $("#project-1").load("project-1.html");
     $("#project-2").load("project-2.html");
+    $("#project-3").load("project-3.html");
+    $("#project-4").load("project-4.html");
     resize_card();
 });
 
@@ -24,8 +26,8 @@ $(window).resize(function(){
 });
 
 window.onload = function(){
-$('.loading').css('opacity','0');
-setTimeout(function(){
+    $('.loading').css('opacity','0');
+    setTimeout(function(){
         $('.loading').css('display','none');
     }, 1000);
     $('.modal').on('shown.bs.modal', function () {
@@ -54,7 +56,34 @@ setTimeout(function(){
             });
         });
     });
+    $('#project-3-modal').on('shown.bs.modal', function () {
+        $modal = $(this);
+        $(this).find(".modal-body .modal-display img").each(function(index) {
+            var $this = $(this);
+//            $this.hover(function(){
+//                $this.attr('src', $this.attr('data-src')+'s.png');
+//            }, function(){
+//                $this.attr('src', $this.attr('data-src')+'.png');
+//            });
+            var t = setTimeout(function(index){
+              $this.css('opacity','1');
+            }, (index+1)*300);
+
+        });
+        setTimeout(function(){
+            $modal.find(".fade_in").css('opacity', 1);
+        }, 1800);
+    });
+    $('#project-3-modal').on('hidden.bs.modal', function () {
+        $modal = $(this);
+        $(this).find(".modal-body .modal-display img").each(function(index) {
+            var $this = $(this);
+            $this.css('opacity','0');
+        });
+        $modal.find(".fade_in").css('opacity', '0');
+    })
 }
+
 
 //$(document).scroll(function () {
 //    var document_scrollPos = $(document).scrollTop();

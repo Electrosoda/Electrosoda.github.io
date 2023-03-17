@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Libre+Baskerville&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Lato&display=swap');
 
 html, body{
     font-size:16px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lato', sans-serif;
+    color: #1A237E;
+    line-height: 20px;
 }
 
 #background{
@@ -10,31 +12,41 @@ html, body{
     width:100%;
     height:100vh;
     z-index:-1;
-    background: linear-gradient(235deg, rgba(225,245,254,1) 0%, rgba(244,235,255,1) 100%);
+    background: radial-gradient(96.53% 54.31% at 96.53% 10.16%, #BCEAFF 0%, #EFE4FF 100%)
 }
 
 #left-circle{
     position: absolute;
-    right: 65%;
+    right: 62%;
     top: 10%;
     transform: rotate(-51.9deg);
 }
 
 #right-circle{
     position: absolute;
-    left: 65%;
+    left: 60%;
     top: 30%;
     transform: rotate(180deg);
 }
 
-h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
     font-family: 'Kanit', sans-serif;
 }
 
 h2{
-
+    text-align: center;
+    color: #1A237E;
 }
 
+.main-content h2{
+    padding-bottom: 20px;
+}
+
+#projects h2,
+#projects h5,
+#projects h6{
+    color:#5C6BC0;
+}
 #project-1-modal h3,
 #project-1-modal button{
     color: #ffc400;
@@ -43,6 +55,14 @@ h2{
 #project-2-modal h3,
 #project-2-modal button{
     color: #689f38;
+}
+
+#project-3-modal h3{
+    color: #ff4081;
+}
+
+#project-4-modal h3{
+    color: #888dff;
 }
 
 .btn-primary{
@@ -73,17 +93,33 @@ h2{
 }
 
 .content{
-    padding-top:200px;
+    padding-top:110px;
 }
 
 .main-content{
-    padding: 20px 0px 20px 0px;
+    padding: 50px 0px 0px 0px;
 }
 
-.blurred-panel{
+#home .bg{
+    background-image: url('../imgs/home/bgsmall.jpg');
+    background-position: center;
+    box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
+    border-radius: 13px;
+}
+
+.blurred-panel-green{
     box-sizing: border-box;
-    background: linear-gradient(110.12deg, rgba(255, 255, 255, 0.51) -1.18%, rgba(255, 255, 255, 0.04) 100.67%);
-    box-shadow: 0px 8px 12px rgba(135, 135, 135, 0.6);
+    background: linear-gradient(110.12deg, rgba(255, 255, 255, 0.04) -1.18%, rgba(212, 255, 119, 0.4) 47.37%, rgba(255, 255, 255, 0.04) 100.67%);
+    box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    border: 1px solid #ffffff;
+}
+
+.blurred-panel-yellow{
+    box-sizing: border-box;
+    background: linear-gradient(278.38deg, rgba(255, 255, 255, 0) 0.75%, rgba(255, 255, 138, 0.4) 31.49%, rgba(255, 255, 255, 0.04) 99.34%);
+    box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 13px;
     border: 1px solid #ffffff;
@@ -93,14 +129,14 @@ h2{
     width: content-width;
 }
 .main-content > div{
-    padding: 40px;
+    padding: 50px 60px 70px 60px;
 }
 
 .row{
     margin: 0px;
 }
 #projects .row > div{
-    padding: 40px;
+    padding: 30px;
 }
 
 .card{
@@ -109,9 +145,9 @@ h2{
     height: 500px;
     transform: translateX(-50%);
     box-sizing: border-box;
-    background: linear-gradient(110.12deg, rgba(255, 255, 255, 0.51) -1.18%, rgba(255, 255, 255, 0.04) 100.67%);
-    box-shadow: 0px 8px 12px rgba(135, 135, 135, 0.6);
-    backdrop-filter: blur(10px);
+    background: rgba(248, 255, 232, 0.05);
+    box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
+    backdrop-filter: blur(4px);
     border-radius: 24px;
     border: 1px solid #ffffff;
 }
@@ -121,10 +157,15 @@ h2{
 }
 
 .text-frame{
-    padding: 0 20px 0 20px;
+    padding: 0px 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.text-frame h5{
+    padding: 0;
+    margin: 0;
 }
 
 .img-frame{
@@ -178,11 +219,17 @@ h2{
 
 #navbar{
     box-sizing: border-box;
-    height: 100px;
-    background: linear-gradient(110.12deg, rgba(255, 255, 255, 0.51) -1.18%, rgba(255, 255, 255, 0.04) 100.67%);
-    box-shadow: 0px 8px 12px rgba(135, 135, 135, 0.6);
+    height: 60px;
+    background-image: url('../imgs/home/nav.png');
+    background-position: center;
+    box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 13px;
+    padding: 0 20px 0 20px;
+}
+
+#navbar .nav-link, .navbar-brand{
+    color: #1A237E;
 }
 
 .detail-block{
@@ -198,6 +245,34 @@ h2{
     padding: 30px 0 0 0;
     text-align: center;
 }
+
+#project-3-modal .modal-display{
+    padding: 30px 15px 0 15px;
+    text-align: center;
+}
+
+#project-3-modal .modal-display img{
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.fade_in{
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+#project-4-modal .modal-display{
+    padding: 15px;
+    text-align: center;
+    height: auto;
+}
+
+#project-4-modal .modal-display img{
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .modal-display img{
     width: 100%;
@@ -236,7 +311,7 @@ h2{
 }
 
 .modal-center-content{
-    padding: 30px 0 30px 0;
+    padding: 0px 60px 60px 60px;
 }
 
 .modal-left-content{
@@ -258,10 +333,6 @@ h2{
 .modal-right-content{
     position: absolute;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     opacity: 0;
     transition: all 0.5s;
     object-fit: scale;
@@ -280,7 +351,7 @@ h2{
 
 .modal-body > .container{
     background-color: #ffffff;
-    padding: 30px 30px 30px 30px;
+    padding: 40px;
 }
 
 .modal h2{
@@ -301,7 +372,7 @@ h2{
     left:0;
     bottom:0;
     right:0;
-    background:#00695c;
+    background: radial-gradient(96.53% 54.31% at 96.53% 10.16%, #BCEAFF 0%, #EFE4FF 100%);
     transition: 0.5s;
     color:white;
     display: flex;
@@ -321,16 +392,23 @@ h2{
     cursor:pointer;
 }
 
-.container{
-    max-width: 960px;
-}
-@media only screen and (min-width: 992px) {
+
+
+@media only screen and (min-width: 768px) {
     html,body{
         font-size: 18px;
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
+
+    nav .container,
+    .main-content .container{
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     html,body{
         font-size: 16px;
     }
