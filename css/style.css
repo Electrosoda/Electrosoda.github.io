@@ -112,6 +112,7 @@ h2{
     background: linear-gradient(110.12deg, rgba(255, 255, 255, 0.04) -1.18%, rgba(212, 255, 119, 0.4) 47.37%, rgba(255, 255, 255, 0.04) 100.67%);
     box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 13px;
     border: 1px solid #ffffff;
 }
@@ -121,6 +122,7 @@ h2{
     background: linear-gradient(278.38deg, rgba(255, 255, 255, 0) 0.75%, rgba(255, 255, 138, 0.4) 31.49%, rgba(255, 255, 255, 0.04) 99.34%);
     box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 13px;
     border: 1px solid #ffffff;
 }
@@ -148,6 +150,7 @@ h2{
     background: rgba(248, 255, 232, 0.05);
     box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 24px;
     border: 1px solid #ffffff;
 }
@@ -224,6 +227,7 @@ h2{
     background-position: center;
     box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 13px;
     padding: 0 20px 0 20px;
 }
