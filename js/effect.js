@@ -22,6 +22,11 @@ $(document).ready(function(){
 
 $(window).resize(function(){
     resize_card();
+    if($(window).width()<=576){
+        $('.btn-close').removeClass('btn-close-white');
+    }else{
+        $('.btn-close').addClass('btn-close-white');
+    }
 
 });
 
@@ -30,6 +35,13 @@ window.onload = function(){
     setTimeout(function(){
         $('.loading').css('display','none');
     }, 1000);
+
+    if($(window).width()<=576){
+        $('.btn-close').removeClass('btn-close-white');
+    }else{
+        $('.btn-close').addClass('btn-close-white');
+    }
+
     $('.modal').on('shown.bs.modal', function () {
         var $modal = $(this);
         $(this).find('.modal-body').on('scroll', function () {

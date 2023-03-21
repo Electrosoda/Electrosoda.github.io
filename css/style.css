@@ -178,6 +178,8 @@ h2{
     margin: 0 auto;
     overflow:hidden;
     border-radius: 0px 0px 24px 24px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
 }
 
 .img-frame img{
@@ -211,13 +213,11 @@ h2{
 
 .footer{
     height: 100px;
-    font-weight:bold;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation-duration: 2s;
-    animation-delay:2s;
 }
 
 #navbar{
@@ -386,16 +386,19 @@ h2{
 }
 
 #modal-close{
-    font-size:30px;
-    top: 20px;
+    font-size: 30px;
     left: auto;
-    right: 50px;
+    right: 0%;
+    top: 10px;
 }
 
 #modal-close:hover{
     cursor:pointer;
 }
 
+#exp-left{
+    text-align:right;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -422,7 +425,15 @@ h2{
     }
 
     .main-content > div{
-        padding: 10px;
+        padding: 20px 10px 20px 10px;
+    }
+
+    .main-content h2 {
+        padding-bottom: 10px;
+    }
+
+    #exp-left, #exp-right{
+        text-align:center;
     }
 
     .detail-block{
@@ -430,7 +441,7 @@ h2{
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
-        padding: 0px;
+        padding: 10px 0 0 0;
     }
 
     #projects .row > div{
@@ -443,5 +454,48 @@ h2{
 
     .modal-right-panel{
         display: none;
+    }
+
+    .modal-center-content{
+        padding: 0px 0px 20px 0px;
+    }
+
+    .footer{
+        margin-top: 10px;
+    }
+
+    .navbar-toggler,
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        line-height: 60px;
+        padding: 0;
+    }
+
+    .navbar-collapse{
+        background-image: url('../imgs/home/nav.png');
+        background-position: bottom;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 12px rgba(26, 35, 126, 0.2);
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 0 10px 0 10px;
+    }
+
+    .modal-body > .container{
+        padding: 10px;
+    }
+
+    .col-lg-12 .modal-display video{
+        width: 100%;
+    }
+
+    #project-3-modal .modal-display {
+        padding: 30px 5px 0 5px;
     }
 }
