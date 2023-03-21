@@ -341,8 +341,15 @@ h2{
     transition: all 0.5s;
     object-fit: scale;
     padding: 0 15px 0 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.modal-content-mobile{
+    display: none;
+}
 .modal-right-content img{
     height: 100%;
 }
@@ -388,7 +395,7 @@ h2{
 #modal-close{
     font-size: 30px;
     left: auto;
-    right: 0%;
+    right: 20px;
     top: 10px;
 }
 
@@ -412,6 +419,40 @@ h2{
     nav .container,
     .main-content .container{
         max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .modal-left-content{
+        padding: 0 15px 0 15px;
+    }
+
+    .modal-content-mobile{
+        display: block;
+    }
+    .modal-right-panel{
+        display: none;
+    }
+
+    .modal-body > .container{
+        padding: 10px;
+    }
+
+    .col-lg-12 .modal-display video{
+        width: 100%;
+    }
+
+    #project-3-modal .modal-display {
+        padding: 30px 5px 0 5px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #modal-close{
+        font-size: 20px;
+        right: 10px;
+        top: 10px;
     }
 }
 
@@ -487,15 +528,6 @@ h2{
         padding: 0 10px 0 10px;
     }
 
-    .modal-body > .container{
-        padding: 10px;
-    }
 
-    .col-lg-12 .modal-display video{
-        width: 100%;
-    }
 
-    #project-3-modal .modal-display {
-        padding: 30px 5px 0 5px;
-    }
 }
