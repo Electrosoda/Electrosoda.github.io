@@ -6,6 +6,7 @@ function resize_card(){
 //        img_height = width / 16 * 9;
         text_height = height / 4;
         img_height = text_height * 3;
+        $('.text-frame').css('height', text_height);
     }
     else{
         text_height = $('.text-frame').height() * 1.1;
@@ -16,7 +17,7 @@ function resize_card(){
 //        height = img_height + text_height;
     }
     $('.card').css('height', height);
-    $('.text-frame').css('height', text_height);
+
     $('.img-frame').css('padding-bottom', img_height);
     $('.img-frame img').css('height', img_height);
     $('.img-frame .modal-display').css('height', img_height);
