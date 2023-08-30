@@ -496,6 +496,10 @@ h2{
         padding: 10px 10px 40px 10px;
     }
 
+    .main-title{
+        margin-bottom: 0px;
+    }
+
     .main-content > div{
         padding: 20px 10px 20px 10px;
     }
