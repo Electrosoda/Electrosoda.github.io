@@ -1,22 +1,11 @@
 function resize_card(){
     width = $('.card').width();
-//
-    if($(window).width()>=992){
-        height = width /5 * 3;
-//        img_height = width / 16 * 9;
-        text_height = height / 4;
-        img_height = text_height * 3;
-        $('.text-frame').css('height', text_height);
-    }
-    else{
-        text_height = $('.text-frame').height() * 1.1;
-        height = text_height * 2;
+    img_height = width / 2.16;
 
-//        text_height = height /2;
-        img_height = text_height;
-//        height = img_height + text_height;
-    }
-    $('.card').css('height', height);
+    $('.card').each(function(){
+        height = img_height + $(this).children('.text-frame').height() + 60;
+        $(this).css('height', height);
+    });
 
     $('.img-frame').css('padding-bottom', img_height);
     $('.img-frame img').css('height', img_height);
