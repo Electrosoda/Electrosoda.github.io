@@ -112,11 +112,11 @@ h2{
 }
 
 .main-content{
-    padding: 0px 0px 30px 0px;
+    padding: 30px 0px 30px 0px;
 }
 
 .main-title{
-    padding-bottom:15px;
+    margin-bottom:-15px;
 }
 
 #home .bg{
