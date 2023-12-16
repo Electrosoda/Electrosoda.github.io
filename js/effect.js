@@ -14,10 +14,10 @@ function resize_card(){
 
 $(document).ready(function(){
     $("#nav-placeholder").load("navbar.html");
-//    $("#project-1").load("project-1.html");
-//    $("#project-2").load("project-2.html");
-//    $("#project-3").load("project-3.html");
-//    $("#project-4").load("project-4.html");
+    $("#project-1").load("project-1.html");
+    $("#project-2").load("project-2.html");
+    $("#project-3").load("project-3.html");
+    $("#project-4").load("project-4.html");
     resize_card();
 });
 
