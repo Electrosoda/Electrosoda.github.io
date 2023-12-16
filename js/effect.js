@@ -44,6 +44,25 @@ window.onload = function(){
         $('.btn-close').addClass('btn-close-white');
     }
 
+    const lazyImgList = document.getElementsByClassName('lazy_img');
+
+    for (x of lazyImgList) {
+
+        console.log(x);
+        const observer = new IntersectionObserver((changes) => {
+
+            changes.forEach(change => {
+                if (change.isIntersecting) {
+                    const img = change.target;
+                    // console.log();
+                    img.src = img.getAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        })
+        observer.observe(x);
+    }
+
     $('.modal').on('shown.bs.modal', function () {
         var $modal = $(this);
         $(this).find('.modal-body').on('scroll', function () {
