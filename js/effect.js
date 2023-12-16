@@ -14,10 +14,10 @@ function resize_card(){
 
 $(document).ready(function(){
     $("#nav-placeholder").load("navbar.html");
-    $("#project-1").load("project-1.html");
-    $("#project-2").load("project-2.html");
-    $("#project-3").load("project-3.html");
-    $("#project-4").load("project-4.html");
+//    $("#project-1").load("project-1.html");
+//    $("#project-2").load("project-2.html");
+//    $("#project-3").load("project-3.html");
+//    $("#project-4").load("project-4.html");
     resize_card();
 });
 
@@ -43,9 +43,13 @@ window.onload = function(){
     }else{
         $('.btn-close').addClass('btn-close-white');
     }
-
+    $("#project-1").load("project-1.html");
+    $("#project-2").load("project-2.html");
+    $("#project-3").load("project-3.html");
+    $("#project-4").load("project-4.html");
     $('.modal').on('shown.bs.modal', function () {
         var $modal = $(this);
+
         $(this).find('.modal-body').on('scroll', function () {
             var scrollPos = $(this).scrollTop();
             var modal_right = $(this).find('.modal-right-content');
